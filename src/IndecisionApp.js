@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import AddOption from './components/AddOption';
-import Options from './components/Options';
-import Header from './components/Header';
-import Action from './components/Action';
+
+import AddOption from './AddOption';
+import Header from './Header';
+import Action from './Action';
+import Options from './Options';
 
 
-class IndecisionApp extends React.Component {
+
+ export default class IndecisionApp extends React.Component {
     constructor(props) {
         super(props);
         this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
@@ -87,6 +88,3 @@ class IndecisionApp extends React.Component {
 IndecisionApp.defaultProps = {
     options: []
 }
-
-
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'));

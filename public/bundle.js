@@ -973,9 +973,9 @@ var _AddOption = __webpack_require__(32);
 
 var _AddOption2 = _interopRequireDefault(_AddOption);
 
-var _Option = __webpack_require__(33);
+var _Options = __webpack_require__(36);
 
-var _Option2 = _interopRequireDefault(_Option);
+var _Options2 = _interopRequireDefault(_Options);
 
 var _Header = __webpack_require__(34);
 
@@ -1088,7 +1088,7 @@ var IndecisionApp = function (_React$Component) {
                     hasOptions: this.state.options.length > 0,
                     handlePick: this.handlePick
                 }),
-                _react2.default.createElement(Options, {
+                _react2.default.createElement(_Options2.default, {
                     options: this.state.options,
                     handleDeleteOptions: this.handleDeleteOptions,
                     handleDeleteOption: this.handleDeleteOption
@@ -1103,30 +1103,6 @@ var IndecisionApp = function (_React$Component) {
 
 IndecisionApp.defaultProps = {
     options: []
-};
-
-var Options = function Options(props) {
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-            'button',
-            { onClick: props.handleDeleteOptions },
-            'Remove All'
-        ),
-        props.options.length == 0 && _react2.default.createElement(
-            'p',
-            null,
-            'Please add option'
-        ),
-        props.options.map(function (option) {
-            return _react2.default.createElement(_Option2.default, {
-                key: option,
-                optionText: option,
-                handleDeleteOption: props.handleDeleteOption
-            });
-        })
-    );
 };
 
 _reactDom2.default.render(_react2.default.createElement(IndecisionApp, null), document.getElementById('app'));
@@ -21522,6 +21498,53 @@ var Action = function Action(props) {
 };
 
 exports.default = Action;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Option = __webpack_require__(33);
+
+var _Option2 = _interopRequireDefault(_Option);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Options = function Options(props) {
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'button',
+            { onClick: props.handleDeleteOptions },
+            'Remove All'
+        ),
+        props.options.length == 0 && _react2.default.createElement(
+            'p',
+            null,
+            'Please add option'
+        ),
+        props.options.map(function (option) {
+            return _react2.default.createElement(_Option2.default, {
+                key: option,
+                optionText: option,
+                handleDeleteOption: props.handleDeleteOption
+            });
+        })
+    );
+};
+
+exports.default = Options;
 
 /***/ })
 /******/ ]);
