@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import AddOption from './components/AddOption';
 import Option from './components/Option';
 import Header from './components/Header';
+import Action from './components/Action';
 
 
 class IndecisionApp extends React.Component {
@@ -85,18 +86,6 @@ class IndecisionApp extends React.Component {
 }
 IndecisionApp.defaultProps = {
     options: []
-}
-
-// stateless functional component(looks)
-
-const Action = (props) => {
-    return (
-        <div>
-            <button onClick={props.handlePick} disabled={!props.hasOptions}>
-                What should I do?
-            </button>
-        </div>
-    );
 }
 
 
